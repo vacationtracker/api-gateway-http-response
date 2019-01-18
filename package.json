@@ -26,5 +26,17 @@
   "license": "MIT",
   "devDependencies": {
     "jest": "^23.6.0"
-  }
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stojanovic/api-gateway-http-response.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stojanovic/api-gateway-http-response/issues"
+  },
+  "homepage": "https://github.com/stojanovic/api-gateway-http-response#readme"
 }
