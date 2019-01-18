@@ -1,7 +1,7 @@
 {
   "name": "api-gateway-http-response",
   "version": "1.0.0",
-  "description": "A small library to generate API Gateway HTTP responses in CloudFormation/AWS SAM",
+  "description": "A small library that generates API Gateway HTTP responses for Lambda proxy integration (ie. for CloudFormation and AWS SAM)",
   "main": "index.js",
   "scripts": {
     "test": "jest --colors"

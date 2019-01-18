@@ -1,6 +1,6 @@
 # API Gateway HTTP Response for AWS Lambda
 
-A small library that generates API Gateway HTTP responses for AWS Lambda (i.e., for CloudFormation/AWS SAM).
+A small library that generates API Gateway HTTP responses for Lambda proxy integration. It can be used with AWS CloudFormation and AWS SAM.
 
 ## Usage
 
