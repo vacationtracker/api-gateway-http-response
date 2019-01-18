@@ -1,0 +1,30 @@
+{
+  "name": "api-gateway-http-response",
+  "version": "1.0.0",
+  "description": "A small library to generate API Gateway HTTP responses in CloudFormation/AWS SAM",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --colors"
+  },
+  "jest": {
+    "roots": [
+      "<rootDir>/index.js",
+      "<rootDir>/tests/"
+    ]
+  },
+  "keywords": [
+    "api",
+    "gateway",
+    "http",
+    "response",
+    "aws",
+    "sam",
+    "cloudformation",
+    "lambda"
+  ],
+  "author": "Slobodan Stojanović <slobodan@cloudhorizon.com> (http://slobodan.me)",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^23.6.0"
+  }
+}
