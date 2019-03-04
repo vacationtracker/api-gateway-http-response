@@ -1,5 +1,5 @@
 {
-  "name": "api-gateway-http-response",
+  "name": "@vacationtracker/api-gateway-http-response",
   "version": "1.0.0",
   "description": "A small library that generates API Gateway HTTP responses for Lambda proxy integration (ie. for CloudFormation and AWS SAM)",
   "main": "index.js",
@@ -22,7 +22,10 @@
     "cloudformation",
     "lambda"
   ],
-  "author": "Slobodan Stojanović <slobodan@cloudhorizon.com> (http://slobodan.me)",
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "Vacation Tracker <hello@vacationtracker.io> (https://vacationtracker.io)",
   "license": "MIT",
   "devDependencies": {
     "jest": "^23.6.0"

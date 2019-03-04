@@ -56,7 +56,7 @@ A common usage would be inside an AWS Lambda function, similar to this:
 ```javascript
 'use strict'
 
-const httpResponse = require('api-gateway-http-response')
+const httpResponse = require('@vacationtracker/api-gateway-http-response')
 const parseApiEvent = require('./parse-event') // A function that parses an event
 const businessLogic = require('./business-logic') // A function that handles a logic for your Lambda function
 
