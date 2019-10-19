@@ -8,8 +8,6 @@ interface IHttpResponse {
   isBase64Encoded: boolean
 }
 
-import httpResponse = require('httpResponse')
-
-declare function httpResponse(body?: any, statusCode?: number, headers: IHeaders, isBase64Encoded?: boolean): IHttpResponse
+declare function httpResponse(body?: any, statusCode?: number, headers?: IHeaders, isBase64Encoded?: boolean): IHttpResponse
 
 export = httpResponse
