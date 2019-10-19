@@ -1,5 +1,7 @@
 # API Gateway HTTP Response for AWS Lambda
 
+[![Build Status](https://travis-ci.org/vacationtracker/api-gateway-http-response.svg?branch=master)](https://travis-ci.org/vacationtracker/api-gateway-http-response) [![npm](https://img.shields.io/npm/v/@vacationtracker/api-gateway-http-response.svg?maxAge=2592000?style=plastic)](https://www.npmjs.com/package/@vacationtracker/api-gateway-http-response) [![npm](https://img.shields.io/npm/dt/@vacationtracker/api-gateway-http-response.svg?maxAge=2592000?style=plastic)](https://www.npmjs.com/package/@vacationtracker/api-gateway-http-response)
+
 A small library that generates API Gateway HTTP responses for Lambda proxy integration. It can be used with AWS CloudFormation and AWS SAM.
 
 ## Usage
