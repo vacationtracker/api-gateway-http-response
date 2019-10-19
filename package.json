@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A small library that generates API Gateway HTTP responses for Lambda proxy integration (ie. for CloudFormation and AWS SAM)",
   "main": "index.js",
+  "typings": "index.d.ts",
   "scripts": {
     "test": "jest --colors"
   },
@@ -28,7 +29,7 @@
   "author": "Vacation Tracker <hello@vacationtracker.io> (https://vacationtracker.io)",
   "license": "MIT",
   "devDependencies": {
-    "jest": "^23.6.0"
+    "jest": "^24.9.0"
   },
   "directories": {
     "test": "tests"
