@@ -1,6 +1,6 @@
 {
   "name": "@vacationtracker/api-gateway-http-response",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A small library that generates API Gateway HTTP responses for Lambda proxy integration (ie. for CloudFormation and AWS SAM)",
   "main": "index.js",
   "typings": "index.d.ts",
