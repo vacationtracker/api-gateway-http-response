@@ -5,6 +5,7 @@ interface IHttpResponse {
   statusCode: number
   body: string
   headers: IHeaders,
+  multiValueHeaders?: IHeaders,
   isBase64Encoded: boolean
 }
 

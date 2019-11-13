@@ -66,7 +66,48 @@ describe('Amazon API Gateway HTTP response', () => {
     })
   })
 
-  test('should set custom headers if they are provided', () => {
+  test('should set multi value headers if they are provided', () => {
+    expect(underTest('', 418, {
+      'Set-Cookie': [
+        'cookie1=test; Domain=.example.com; Secure; HttpOnly; Path=/; Expires=Thu, 12 Nov 2020 19:09:04 GMT',
+        'cookie2=test; Domain=.example.com; Secure; HttpOnly; Path=/; Expires=Thu, 12 Nov 2020 19:09:04 GMT'
+      ]
+    })).toEqual({
+      statusCode: 418,
+      body: '',
+      headers: {},
+      multiValueHeaders: {
+        'Set-Cookie': [
+          'cookie1=test; Domain=.example.com; Secure; HttpOnly; Path=/; Expires=Thu, 12 Nov 2020 19:09:04 GMT',
+          'cookie2=test; Domain=.example.com; Secure; HttpOnly; Path=/; Expires=Thu, 12 Nov 2020 19:09:04 GMT'
+        ]
+      },
+      isBase64Encoded: false
+    })
+  })
+
+  test('should set regular and multi value headers if they are provided', () => {
+    expect(underTest('', 418, {
+      'Custom-Headers': true,
+      'Set-Cookie': [
+        'cookie1=test; Domain=.example.com; Secure; HttpOnly; Path=/; Expires=Thu, 12 Nov 2020 19:09:04 GMT',
+        'cookie2=test; Domain=.example.com; Secure; HttpOnly; Path=/; Expires=Thu, 12 Nov 2020 19:09:04 GMT'
+      ]
+    })).toEqual({
+      statusCode: 418,
+      body: '',
+      headers: { 'Custom-Headers': true },
+      multiValueHeaders: {
+        'Set-Cookie': [
+          'cookie1=test; Domain=.example.com; Secure; HttpOnly; Path=/; Expires=Thu, 12 Nov 2020 19:09:04 GMT',
+          'cookie2=test; Domain=.example.com; Secure; HttpOnly; Path=/; Expires=Thu, 12 Nov 2020 19:09:04 GMT'
+        ]
+      },
+      isBase64Encoded: false
+    })
+  })
+
+  test('should set multi value header', () => {
     expect(underTest('', 418, {
       'Custom-Headers': true
     })).toEqual({

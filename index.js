@@ -14,12 +14,28 @@ function httpResponse(body, statusCode, headers, isBase64Encoded) {
     body = body instanceof Error ?  body.toString() : JSON.stringify(body)
   }
 
-  return {
+  const regularHeaders = {}
+  const multiValueHeaders = {}
+
+  Object.keys(responseHeaders).forEach(headerName => {
+    if (Array.isArray(responseHeaders[headerName])) {
+      multiValueHeaders[headerName] = responseHeaders[headerName]
+    } else {
+      regularHeaders[headerName] = responseHeaders[headerName]
+    }
+  })
+
+  const response = {
     statusCode: code,
     body: body || '',
-    headers: responseHeaders,
+    headers: regularHeaders,
     isBase64Encoded: isBase64Encoded ? true : false
-  }
+  };
+
+  if (Object.keys(multiValueHeaders).length)
+    response.multiValueHeaders = multiValueHeaders
+
+  return response;
 }
 
 module.exports = httpResponse
